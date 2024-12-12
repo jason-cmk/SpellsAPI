@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "R/3LpgKLKEQC9D8VFCJPXEOMCXSBQcYbBHWq1nLq6rcIIXbl8fXgkP3hlwnHSvdTcxoauCgDLZJdS/2qT/yFCw==",
+  "success": true,
+  "projectFilePath": "/home/jason/src/personal/source-gen/ZooApi/ZooApi.csproj",
+  "expectedPackageFiles": [
+    "/home/jason/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.8/microsoft.aspnetcore.app.ref.8.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
