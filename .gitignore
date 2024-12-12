@@ -482,3 +482,7 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# test output files
+SpellsApi/normal/*
+SpellsApi/generated/*
