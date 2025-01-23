@@ -2,7 +2,7 @@ using Spells;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton(TimeProvider.System);
-builder.Services.AddKeyedScoped<ISpellsService, SpellsService>("SpellsService");
+builder.Services.AddScoped<ISpellsService, SpellsService>();
 
 var app = builder.Build();
 

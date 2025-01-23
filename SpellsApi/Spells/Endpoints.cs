@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+
 namespace Spells;
 
 public record Test(string Id);
@@ -7,25 +9,25 @@ public static class Endpoints
     {
         app.MapGet("/", () => "alive");
 
-        app.MapGet("/spells", async ([FromKeyedServices("SpellsService")] ISpellsService spellsService) =>
+        app.MapGet("/spells", async ([FromServices] ISpellsService spellsService) =>
         {
             var result = await spellsService.GetSpells();
             return result;
         });
 
-        app.MapGet("/spellsGenerated", async ([FromKeyedServices("SpellsService")] ISpellsService spellsService) =>
+        app.MapGet("/spellsGenerated", async ([FromServices] ISpellsService spellsService) =>
         {
             var result = await spellsService.GetSpellsGenerated();
             return result;
         });
 
-        app.MapGet("/makeSpells", ([FromKeyedServices("SpellsService")] ISpellsService spellsService) =>
+        app.MapGet("/makeSpells", ([FromServices] ISpellsService spellsService) =>
         {
             spellsService.MakeSpells();
             return "success";
         });
 
-        app.MapGet("/makeSpellsGenerated", ([FromKeyedServices("SpellsService")] ISpellsService spellsService) =>
+        app.MapGet("/makeSpellsGenerated", ([FromServices] ISpellsService spellsService) =>
         {
             spellsService.MakeSpellsGenerated();
             return "success";
